@@ -1,0 +1,25 @@
+{
+  "name": "sprint-10-node-om-10-3-react-vitalii-team_v-5",
+  "version": "1.0.0",
+  "description": "Implement an http server (you can use ExpressJS) that initiates asynchronous operations when a GET request is made:\r - Continuous output to the server console of the current date and time in UTC format at certain intervals.\r - Stopping the console output sending time after a while and completing the server response with the return to the user of the current date and time of shutdown in UTC format.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ita-rom-s09-node/sprint-10-node-om-10-3-react-vitalii-team_v-5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ita-rom-s09-node/sprint-10-node-om-10-3-react-vitalii-team_v-5/issues"
+  },
+  "homepage": "https://github.com/ita-rom-s09-node/sprint-10-node-om-10-3-react-vitalii-team_v-5#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "express": "^4.17.1"
+  }
+}
