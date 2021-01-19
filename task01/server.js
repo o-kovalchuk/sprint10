@@ -1,4 +1,5 @@
 const express = require('express');
+const getDateAndTime = require('./maskDateAndTime');
 const app = express();
 const port = 3000;
 
@@ -6,14 +7,10 @@ const myArgs = process.argv.slice(2);
 const i = myArgs.indexOf('-i') !== -1 ? Number(myArgs[myArgs.indexOf('-i') + 1]) : 500;
 const t = myArgs.indexOf('-t') !== -1 ? Number(myArgs[myArgs.indexOf('-t') + 1]) : 2500;
 
-const getCurrentDateAndTime = () => {
-    return new Date().toISOString().replace(/T/, ', ').replace(/\..+/, '');
-};
-
 const generateCurrentDateAndTime = (req, res, next) => {
     let deltaTime = i;
     const intervalID = setInterval(() => {
-        const currentDateAndTime = getCurrentDateAndTime();
+        const currentDateAndTime = getDateAndTime();
         if (deltaTime <= t) {
             console.log(currentDateAndTime);
             deltaTime = deltaTime + i;
@@ -28,11 +25,10 @@ app.use(generateCurrentDateAndTime);
 
 app.get('/', (req, res) => {
     setTimeout(() => {
-        res.send(getCurrentDateAndTime());
+        res.send(getDateAndTime());
     }, t);
 });
 
 app.listen(port, () => {
-    console.log('Starting');
-    console.log(`Server is listening on ${port}`);
+    console.log(`Starting \n Server is listening on ${port}`);
 });
