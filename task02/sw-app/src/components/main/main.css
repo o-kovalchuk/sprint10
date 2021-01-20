@@ -1,0 +1,31 @@
+.Main-header {
+  background-color: transparent;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.Main-img{
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.Main-header h3{
+  margin-bottom: 20px;
+}
+
+.Main-button{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background-color: deepskyblue;
+  border: 1px solid deepskyblue;
+  color: #fff;
+  padding: 7px 15px;
+  cursor: pointer;
+  transition: .3s all;
+}
+
+.Main-button:hover {
+  background-color: #ffffff;
+  color: deepskyblue;
+}

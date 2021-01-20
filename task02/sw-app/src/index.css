@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #000;
+}
+body, h3, ul, li{
+  margin: 0;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 18px;
+}
+p {
+  text-align: center;
+}
+
+button{
+  cursor: pointer;
+}
+
+button:hover, button:active, button:focus{
+  outline: none;
+}
